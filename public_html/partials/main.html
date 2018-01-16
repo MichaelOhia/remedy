@@ -1,0 +1,175 @@
+<form ng-submit="submit()" ng-controller="MainCtrl">
+        <div class="container">
+                <div class="row">
+                        <div class="col-md-6 col-md-offset-3 panel panel-default">
+                            <img src="public/logo.png">
+                            <h1 class="margin-base-vertical">ITCS Web Form</h1>
+
+                            
+                                
+                                <label for="usr">User Name:</label>
+                                <input type="text" class="form-control" name="usr" ng-model="userName" required>
+                            
+
+                            <div class="checkbox">
+                                <label><input type="checkbox" value=true id="hipCheck" required>Verify In HIP</label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label><input type="checkbox" value=true id="legalCheck" required>Verify Legal Hold</label>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="summary">Customer Summary:</label>
+                                <textarea class="form-control" rows="3" name="summary" ng-model="customerSummary"></textarea>
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio">Break / Fix</label>
+                                </div>
+
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio">Request</label>
+                                </div>
+
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio">Consult</label>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <select class="form-control" name="opcatttwo" id="opcatttwo">
+                                    <option value="null">Select Option</option>
+                                    <option value="Software">Software</option>
+                                    <option value="Hardware">Hardware</option>
+                                </select>
+                                  <!--end of content for form pt1-->
+                            </div>
+
+                                        <!--Form pt.2-->
+
+                            <div class="form-group" id="parttwo">
+                                <label for="model">Device Model:</label>
+                                <select class="form-control" selectpicker data-live-search="true" data-width="100%" ng-model="deviceModel">
+                                    <option value="null">Select Device Model</option>
+                                    <option value="Apple iMac">Apple iMac</option>
+                                    <option value="Apple Mac Mini">Apple Mac Mini</option>
+                                    <option value="Apple Mac Pro">Apple Mac Pro</option>
+                                    <option value="Apple Macbook Air">Apple Macbook Air</option>
+                                    <option value="Apple MacBook Pro 13">Apple MacBook Pro 13</option>
+                                    <option value="Apple MacBook Pro 15">Apple MacBook Pro 15</option>
+                                    <option value="Apple Other">Apple Other</option>
+                                    <option value="Dell Latitude E7450">Dell Latitude E7450</option>
+                                    <option value="Dell Latitude E7470">Dell Latitude E7470</option>
+                                    <option value="Dell Precision 390">Dell Precision 390</option>
+                                    <option value="Dell  Other">Dell  Other</option>
+                                    <option value="Dell Precision T3600">Dell Precision T3600</option>
+                                    <option value="Dell Precision T3620">Dell Precision T3620</option>
+                                    <option value="Dell Precision T5600">Dell Precision T5600</option>
+                                    <option value="Lenovo  Other">Lenovo  Other</option>
+                                    <option value="Lenovo ThinkPad P50 Touch">Lenovo ThinkPad P50 Touch</option>
+                                    <option value="Lenovo ThinkPad T470s">Lenovo ThinkPad T470s</option>
+                                    <option value="Lenovo ThinkPad T460s">Lenovo ThinkPad T460s</option>
+                                    <option value="Lenovo ThinkPad T450s">Lenovo ThinkPad T450s</option>
+                                    <option value="Lenovo ThinkPad W541">Lenovo ThinkPad W541</option>
+                                    <option value="Lenovo ThinkPad P51">Lenovo ThinkPad P51</option>
+                                    <option value="Lenovo Thinkpad X1 Carbon">Lenovo Thinkpad X1 Carbon</option>
+                                    <option value="Touch">Touch</option>
+                                    <option value="Microsoft Surface Pro 5">Microsoft Surface Pro 5</option>
+                                    <option value="Microsoft Surface Pro 4">Microsoft Surface Pro 4</option>
+                                    <option value="Microsoft Surface Pro 3">Microsoft Surface Pro 3</option>
+                                    <option value="Microsoft Other">Microsoft Other</option>
+                                    <option value="Other">Other</option>
+                              
+                                </select>
+
+                                <br>
+                                <label for="os">OS Vendor:</label>
+                                <br>
+                                <select class="form-control">
+                                    <option value="Fetch from Remedy" ng-model="OSVendor">{{}}</option>          
+                                </select>
+                                <br>
+                                <label for="os">OS Version:</label>
+                                <br>
+                                <select class="form-control">
+                                    <option value="Fetch from Remedy" ng-model="OSVersion">{{}}</option>          
+                                </select>
+
+                                <div id="hwdiv">
+                                       
+                                    <div class="form-group">
+                                        <br>
+                                        <label for="action">What is the issue?</label>
+                                        <select class="form-control">
+                                            <option value="Fetch from Remedy" ng-model="hwIssue">{{}}</option>          
+                                        </select>
+                                    </div>
+                                             <!--HW LIST END-->
+                                
+                                          <!--HW ACTION LIST-->
+                                    <div class="form-group">
+                                        <label for="action">What action did you take?</label>
+                                        <select class="form-control">
+                                            <option value="Fetch from Remedy" ng-model="hwAction">{{}}</option>          
+                                        </select>
+                                    </div>
+                                         <!--HW ACTION LIST END-->
+                                </div>
+
+
+                                                <!--SW Div-->
+                                <div id="swdiv">
+                                    <!--SW  LIST-->
+                                    <div class="form-group">
+                                        <br>
+                                        <label for="action">What is the issue?</label>
+                                        <select class="form-control">
+                                            <option value="Fetch from Remedy" ng-model="swIssue">{{}}</option>          
+                                        </select>
+                                    </div>
+                                                <!--sW LIST END-->
+
+                                                <!--sW ACTION LIST-->
+                                    <div class="form-group">
+                                        <label for="action">What action did you take?</label>
+                                        <select class="form-control">
+                                            <option value="Fetch from Remedy" ng-model="swAction">{{}}</option>          
+                                        </select>
+                                    </div>
+                                                <!--SW ACTION LIST END-->
+                                </div>
+
+
+                                                <!--Conclusion -->
+                                <div class="form-group">
+                                    <label for="notes">Case Notes:</label>
+                                    <input type="text" class="form-control" name="notes" ng-model="caseNote">
+                                </div>
+                                <div class="form-group">
+                                    <label for="resolution">Final Resolution:</label>
+                                    <textarea class="form-control" rows="2" name="resolution" ng-model="resolution"></textarea>
+                                </div>
+
+
+                                                <!-- Submit Buttons -->
+                                <div class="btn-group" role="group">
+                                    <button type="reset" class="btn btn-default" value="Reset" id="resetButton">Reset Form</button>
+                                    <button type="submit" class="btn btn-primary" value="Create Ticket" id="submitButton"/>Create Ticket</button>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+                </div>
+        </div>
+                
+      	
+</form>

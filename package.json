@@ -1,0 +1,8 @@
+{
+    "name": "backup",
+    "version": "1.0.0",
+    "keywords": ["util", "functional", "server", "client", "browser"],
+    "author": "umunna",
+    "contributors": [],
+    "dependencies": {}
+}
